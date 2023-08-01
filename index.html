@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>QRCode Generator</title>
+</head>
+<body>
+    <section id="panel">
+        <div id="console">
+            <button class="type-btn" onclick="getInput('url', 'ex. https://example.com')">LINK</button>
+            <button class="type-btn" onclick="getTextarea()">TEXT</button>
+            <button class="type-btn" onclick="getInput('email', 'ex. indirizzo@email.com')">EMAIL</button>
+            <button class="type-btn" onclick="getInput('tel', 'Inserisci numero di telefono')">NUMBER</button>
+            <button class="type-btn" onclick="getInput('url', 'Inserisci url di un profilo social')">SOCIALS</button>
+            <button class="type-btn" onclick="getInput('file', 'Seleziona un file .pdf')">PDF <span>Beta</span></button>
+        </div>
+        <div id="qr-generate">
+            <input id="qr-value" type="url" placeholder="ex. https://example.com">
+            <textarea id="qr-text-value" cols="40" rows="4" maxlength="700" placeholder="max.: 700 caratteri" class="hide"></textarea>
+            <details>
+                <summary>Clicca qui per saperne di più!</summary>
+                <span>Qui potrai generare diversi tipi di QRCode; per farlo ti basterà cliccare sui bottoni qui sopra per scegliere il tipo di QRCode e compilare il campo di testo. </span>
+                <br>
+                <span>Per esempio utilizzare il <b>link</b> per generare il QRCode del tuo sito web o il menù del tuo locale e molto altro; oppure utillizare il <b>testo</b> per le avvertenze o istruzioni d'uso dei tuoi prodotti; puoi anche generare il QRCode per i tuoi contatti come l'<b>e-mail</b>, il tuo <b>numero di telefono</b> o il tuo <b>conatto social</b>! Potrai anche scaricare il QRCode sul tuo dispositivo e gestirlo come preferisci. Ma non preoccuparti: questo sito non salverà né condividerà a terzi i dati che inserirai!</span>
+                <br>
+                <span>Però attenzione! Il codice generato è quello che viene chiamato <b>QRCode statico</b>: ovvero, una volta generato, i dati al suo interno rimarranno immutabili. Se per esempio apporrai modifiche al tuo sito web o ciò che il codice contiene, il codice non conterrà la versione modificata ma quella corrente al momento della generazione. Quindi per avere il codice aggiornato ti basterà generarne un altro dopo aver apportato la modifica.</span>
+            </details>
+        </div>
+    </section>
+    <section id="qr-container">
+        <canvas id="qrcode"></canvas>
+        <span id="prompt">Compila il campo per generare il QRCode</span>
+        <button id="download-btn" class="hide">Download QRCode</button>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
