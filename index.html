@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="icons/qrcode.png">
     <title>QRCode Generator</title>
 </head>
 <body>
     <section id="panel">
         <div id="console">
-            <button class="type-btn" onclick="getInput('url', 'ex. https://example.com')">LINK</button>
-            <button class="type-btn" onclick="getTextarea()">TEXT</button>
-            <button class="type-btn" onclick="getInput('email', 'ex. indirizzo@email.com')">EMAIL</button>
-            <button class="type-btn" onclick="getInput('tel', 'Inserisci numero di telefono')">NUMBER</button>
-            <button class="type-btn" onclick="getInput('url', 'Inserisci url di un profilo social')">SOCIALS</button>
-            <button class="type-btn" onclick="getInput('file', 'Seleziona un file .pdf')">PDF <span>Beta</span></button>
+            <button id="link-btn" class="type-btn" onclick="getInput('url', 'ex. https://example.com')">Link</button>
+            <button id="text-btn" class="type-btn" onclick="getTextarea()">Testo</button>
+            <button id="email-btn" class="type-btn" onclick="getInput('email', 'ex. indirizzo@email.com')">Email</button>
+            <button id="number-btn" class="type-btn" onclick="getInput('tel', 'Inserisci numero di telefono')">Numero</button>
+            <button id="social-btn" class="type-btn" onclick="getInput('url', 'Inserisci url di un profilo social')">Social</button>
+            <button id="pdf-btn" class="type-btn">PDF <span><b>Soon!</b></span></button>
         </div>
         <div id="qr-generate">
             <input id="qr-value" type="url" placeholder="ex. https://example.com">
@@ -32,8 +33,8 @@
     </section>
     <section id="qr-container">
         <canvas id="qrcode"></canvas>
-        <span id="prompt">Compila il campo per generare il QRCode</span>
-        <button id="download-btn" class="hide">Download QRCode</button>
+        <a href="#qr-value" id="prompt">Compila il campo per generare il QRCode</a>
+        <button id="download-btn" class="hide">Download</button>
     </section>
 
 
