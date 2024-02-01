@@ -75,7 +75,7 @@ body{
     left: 68%;
 }
 
-#link-btn::before, #text-btn::before, #email-btn::before, #number-btn::before, #social-btn::before, #pdf-btn::before{
+#link-btn::before, #text-btn::before, #email-btn::before, #number-btn::before, #social-btn::before, #pdf-btn::before, #download-btn::before{
     content: '';
     display: inline-block;
     width: calc(var(--md1)*0.875);
@@ -173,6 +173,9 @@ canvas {
     cursor: pointer;
     transition: 0.3s;
 }
+#download-btn::before{
+    background-image: url(icons/download.png);
+
 #download-btn:hover {
     box-shadow: none;
 }
