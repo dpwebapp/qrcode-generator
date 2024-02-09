@@ -6,14 +6,11 @@
 }
 
 :root {
-    --textWhite: #ebebeb; /*blue  #2f2ad1*/
-    --darkWhite: #c3c3c2; /*lasciamolo*/
-    --blue: #1470d2; /*lightgreen  #20a805*/
-    /*cerca icone per le opzioni e per il download su icons8
-        allinea a sinistra, collegamento (social), internet, posta elettronica, telefono, PDF, scaricare, qrcode (website icon)
-    */
-    --deepBlack: #242423; /*lasciamolo*/
-    --darkGray: #333533; /*lasciamolo*/
+    --textWhite: #ebebeb;
+    --darkWhite: #c3c3c2;
+    --blue: #1470d2;
+    --deepBlack: #242423;
+    --darkGray: #333533;
     --sm1: 0.25rem; /*4px*/
     --sm2: 0.5rem; /*8px*/
     --sm3: 0.75rem; /*12px*/
@@ -33,13 +30,11 @@ body{
     align-items: center;
     justify-content: space-around;
     font-family: 'Calibri';
-    /* background: linear-gradient(var(--deepBlack), var(--darkGray), var(--darkGray)); */
 }
 
 #panel{
     border-radius: 25px;
     box-shadow: -3px 1.5px 7px var(--darkWhite);
-    /* background: linear-gradient(0.25turn, var(--darkWhite), var(--darkWhite), var(--darkWhite)); */
     height: auto;
 }
 
@@ -75,13 +70,13 @@ body{
     left: 68%;
 }
 
-#link-btn::before, #text-btn::before, #email-btn::before, #number-btn::before, #social-btn::before, #pdf-btn::before{
+#link-btn::before, #text-btn::before, #email-btn::before, #number-btn::before, #social-btn::before, #pdf-btn::before, #download-btn::before{
     content: '';
     display: inline-block;
-    width: calc(var(--md1)*0.875);
-    height: calc(var(--md1)*0.875);
+    width: calc(var(--md1)*1.05);
+    height: calc(var(--md1)*1.05);
     margin-right: 0.7px;
-    background-size: calc(var(--md1)*0.875) calc(var(--md1)*0.875);
+    background-size: calc(var(--md1)*1.05) calc(var(--md1)*1.05);
     vertical-align: middle;
 }
 #link-btn::before{
@@ -114,7 +109,6 @@ body{
     max-width: 300px;
     height: var(--lg1);
     margin: 0 0 var(--sm1) 0;
-    /* background-color: var(--darkWhite); */
     color: var(--darkWhite);
     border-radius: var(--sm2);
     border: 0.05px var(--textWhite) solid;
@@ -142,7 +136,6 @@ details span {
 #qr-container {
     border-radius: 25px;
     box-shadow: 3px 1.5px 7px var(--darkWhite);
-    /* background: linear-gradient(0.75turn, var(--darkWhite), var(--darkWhite), var(--darkWhite)); */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -172,6 +165,9 @@ canvas {
     color: var(--textWhite);
     cursor: pointer;
     transition: 0.3s;
+}
+#download-btn::before {
+    background-image: url(icons/download.png);
 }
 #download-btn:hover {
     box-shadow: none;
