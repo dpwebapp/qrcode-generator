@@ -30,11 +30,12 @@ body{
     align-items: center;
     justify-content: space-around;
     font-family: 'Calibri';
+    background-color: rgb(78, 75, 75);
 }
 
 #panel{
     border-radius: 25px;
-    box-shadow: -3px 1.5px 7px var(--darkWhite);
+    box-shadow: -3px 1.5px 7px var(--darkGray);
     height: auto;
 }
 
@@ -53,7 +54,7 @@ body{
     font-size: calc(var(--md1)*0.875);
     color: var(--textWhite);
     border: none;
-    box-shadow: -2px 3px 5px var(--darkWhite);
+    box-shadow: -2px 3px 5px var(--darkGray);
     border-radius: var(--sm2);
     transition: 0.5s;
     cursor: pointer;
@@ -62,15 +63,8 @@ body{
 .type-btn:hover{
     box-shadow: none;
 }
-.type-btn span {
-    color: rgba(255, 0, 0, 0.807);
-    font-size: var(--sm3);
-    position: absolute;
-    bottom: 5%;
-    left: 68%;
-}
 
-#link-btn::before, #text-btn::before, #email-btn::before, #number-btn::before, #social-btn::before, #pdf-btn::before, #download-btn::before{
+#link-btn::before, #text-btn::before, #email-btn::before, #number-btn::before, #social-btn::before, #file-btn::before, #download-btn::before{
     content: '';
     display: inline-block;
     width: calc(var(--md1)*1.05);
@@ -94,8 +88,8 @@ body{
 #social-btn::before{
     background-image: url(icons/social.png);
 }
-#pdf-btn::before{
-    background-image: url(icons/pdf.png);
+#file-btn::before{
+    background-image: url(icons/file.png);
 }
 
 #qr-generate{
@@ -112,7 +106,7 @@ body{
     color: var(--darkWhite);
     border-radius: var(--sm2);
     border: 0.05px var(--textWhite) solid;
-    box-shadow: -1px 1px 1px var(--darkWhite);
+    box-shadow: -1px 1px 1px var(--darkGray);
     transition: 0.3s;
 }
 #qr-value:focus, #qr-text-value:focus{
@@ -124,18 +118,22 @@ details{
     max-width: calc(var(--lg3)*3.3);
     padding: var(--sm2);
     border-radius: var(--sm1);
-    border: 0.05px var(--textWhite) solid;
-    color: var(--darkGray);
+    border: 0.05px var(--darkGray) solid;
+    color: var(--textWhite);
     cursor: pointer;
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
-details span {
+details p {
     padding: var(--sm1);
+    margin: 0;
+}
+details hr {
+    color: var(--textWhite);
 }
 
 #qr-container {
     border-radius: 25px;
-    box-shadow: 3px 1.5px 7px var(--darkWhite);
+    box-shadow: 3px 1.5px 7px var(--darkGray);
     height: auto;
     display: flex;
     flex-direction: column;
@@ -154,14 +152,14 @@ canvas {
     font-size: var(--md2);
     padding: 0;
     text-decoration: none;
-    color: black;
+    color: var(--textWhite);
 }
 #download-btn {
     width: 50%;
     border-radius: 10px;
     background-color: var(--blue);
     border: 1px solid var(--blue);
-    box-shadow: -2px 3px 5px var(--darkWhite);
+    box-shadow: -2px 3px 5px var(--darkGray);
     color: var(--textWhite);
     cursor: pointer;
     transition: 0.3s;
