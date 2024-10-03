@@ -26,7 +26,7 @@
                 <hr>
                 <p>Qui potrai generare diversi tipi di QRCode, sia dal tuo PC che dal tuo smartphone! Per farlo ti basterà cliccare sui bottoni qui sopra per scegliere il tipo di QRCode e compilare il campo di testo. </p>
                 <!-- <br> -->
-                <p>Per esempio utilizzare il <b>link</b> per generare il QRCode del tuo sito web o il menù del tuo locale e molto altro; oppure utillizare il <b>testo</b> per le avvertenze o istruzioni d'uso dei tuoi prodotti; puoi anche generare il QRCode per i tuoi contatti come l'<b>e-mail</b>, il tuo <b>numero di telefono</b> o il tuo <b>conatto social</b>! Se hai a disposizione un link pubblico collegato ad un tuo file, puoi collegarlo ad un QRCode con <b>File</b>. Potrai anche scaricare il QRCode sul tuo dispositivo e gestirlo come preferisci. Ma non preoccuparti: questo sito non salverà né condividerà a terzi i dati che inserirai.</p>
+                <p>Per esempio utilizzare il <b>link</b> per generare il QRCode del tuo sito web o il menù del tuo locale e molto altro; oppure utillizare il <b>testo</b> per le avvertenze o brevi istruzioni d'uso dei tuoi prodotti; puoi anche generare il QRCode per i tuoi contatti come l'<b>e-mail</b>, il tuo <b>numero di telefono</b> o il tuo <b>conatto social</b>! Se hai a disposizione un link pubblico collegato ad un tuo file, puoi collegarlo ad un QRCode con <b>File</b>. Potrai anche scaricare il QRCode sul tuo dispositivo e gestirlo come preferisci. Ma non preoccuparti: questo sito non salverà né condividerà a terzi i dati che inserirai.</p>
                 <!-- <br> -->
                 <p>Però attenzione! Il codice generato è quello che viene chiamato <b>QRCode statico</b>: ovvero, una volta generato, i dati al suo interno rimarranno immutabili. Quindi se hai bisogno di cambiare le informazioni collegate, dovrai generare un altro QRCode!</p>
             </details>
@@ -35,6 +35,10 @@
     <section id="qr-container">
         <canvas id="qrcode"></canvas>
         <a href="#qr-value" id="prompt">Compila il campo per generare il QRCode</a>
+        <div id="choose-size" class="hide">
+            <span>Dimensione in pixel per il download (50 - 1000)</span>
+            <input type="number" name="qr-size" id="qr-size" min="50" max="1000" step="25" value="500">
+        </div>
         <button id="download-btn" class="hide">Download</button>
     </section>
 

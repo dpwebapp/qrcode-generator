@@ -170,6 +170,11 @@ canvas {
 #download-btn:hover {
     box-shadow: none;
 }
+#choose-size {
+    font-size: .95rem;
+    margin-top: var(--md3);
+    color: var(--textWhite);
+}
 
 @media (max-width: 748px) {
     

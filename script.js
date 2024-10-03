@@ -2,10 +2,13 @@ const qrCode = document.getElementById('qrcode');
 const input = document.getElementById('qr-value');
 const textarea = document.getElementById('qr-text-value');
 const promptText = document.getElementById('prompt');
+const qrSize = document.getElementById('choose-size');
+const inputSize = document.getElementById('qr-size');
 const downloadBtn = document.getElementById('download-btn');
 
 document.addEventListener('DOMContentLoaded', function(){
     input.value = textarea.value = '';
+    inputSize.value = 500;
 });
 
 const qrType = {
@@ -47,10 +50,12 @@ function showQr(value){
     if(!value){
         editQr('inactive');
         hide(downloadBtn);
+        hide(qrSize);
         show(promptText);
     } else {
         editQr('active');
         show(downloadBtn);
+        show(qrSize);
         hide(promptText);
     };
 };
@@ -102,7 +107,13 @@ function getTextarea(){
 
 //download del qrcode
 downloadBtn.addEventListener('click', function(){
-    qr.size = '500';
+    if(inputSize.value < 50){
+        qr.size = 50;
+    } else if(inputSize.value > 1000){
+        qr.size = 1000;
+    } else {
+        qr.size = inputSize.value;
+    };
     const data = qrCode.toDataURL('image/png');
     const link = document.createElement('a');
     link.href = data;
