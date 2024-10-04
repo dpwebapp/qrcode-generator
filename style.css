@@ -121,7 +121,10 @@ details{
     border: 0.05px var(--darkGray) solid;
     color: var(--textWhite);
     cursor: pointer;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+details summary {
+    text-align: center;
 }
 details p {
     padding: var(--sm1);
@@ -152,6 +155,7 @@ canvas {
     font-size: var(--md2);
     padding: 0;
     text-decoration: none;
+    text-align: center;
     color: var(--textWhite);
 }
 #download-btn {
@@ -172,6 +176,7 @@ canvas {
 }
 #choose-size {
     font-size: .95rem;
+    text-align: center;
     margin-top: var(--md3);
     color: var(--textWhite);
 }
