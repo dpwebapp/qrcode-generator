@@ -205,5 +205,8 @@ canvas {
     #prompt, #download-btn {
         margin: var(--sm2);
     }
+    #choose-size {
+        margin: var(--sm2) 0;
+    }
 
 }
